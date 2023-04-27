@@ -1,0 +1,13 @@
+GET http://localhost:5000/api/grade
+
+###
+POST http://localhost:5000/api/grade
+Content-Type: application/json
+
+{
+    "grade": 5,
+    "wilder": "Alex Doe",
+    "skill": "React",
+    "city": "Lille"
+
+}

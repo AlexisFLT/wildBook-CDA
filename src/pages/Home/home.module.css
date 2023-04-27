@@ -3,3 +3,8 @@
     color: #222;
     margin: 0;
 }
+
+.addRemove {
+    display: flex;
+    justify-content: space-around;
+}
