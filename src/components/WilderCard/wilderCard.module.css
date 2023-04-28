@@ -1,11 +1,22 @@
 .app {
+    position: relative;
     padding: 20px;
     border: 1px solid #c9c9c9;
     border-radius: 7px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
   }
+
+  .trash{
+    border: none;
+    position: absolute;
+    top:1%;
+    right: 1%;
+    cursor: pointer;
+    background-color: transparent;
+    
+  }
    
-  .app > img:first-child {
+  .app > img:nth-child(2) {
     border-radius: 7px 7px 0 0;
     margin-bottom: 20px;
     max-width: 100%;

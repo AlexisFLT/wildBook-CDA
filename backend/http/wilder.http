@@ -2,18 +2,19 @@ POST http://localhost:5000/api/wilder
 Content-Type: application/json
 
 {
-    "name": "John Doe"
+    "name": "Michel Doe",
+    "city": "MichelCity"
 }
 
 ###
-GET http://localhost:5000/api/wilder
+GET http://localhost:5000/api/wilder/3
 
 ###
-DELETE http://localhost:5000/api/wilder
+DELETE http://localhost:5000/api/wilder/10
 Content-Type: application/json
 
 {
-    "id": 1
+    "id": 10
 }
 
 ###

@@ -16,13 +16,12 @@ app.get("/", (req, res) => {
 
 app.post("/api/wilder", wilderController.create);
 app.get("/api/wilder", wilderController.read);
-app.delete("/api/wilder", wilderController.delete);
+app.delete("/api/wilder/:id", wilderController.delete);
 app.put("/api/wilder", wilderController.update);
-app.put("/api/wilder/addSkill", wilderController.addSkill);
 
 app.post("/api/skill", skillController.create);
 app.get("/api/skill", skillController.read);
-app.delete("/api/skill", skillController.delete);
+app.delete("/api/skill/:id", skillController.delete);
 app.put("/api/skill", skillController.update);
 
 app.post("/api/grade", gradeController.create);

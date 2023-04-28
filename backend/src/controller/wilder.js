@@ -41,7 +41,8 @@ module.exports = {
   },
   delete: async (req, res) => {
     try {
-      await dataSource.getRepository(Wilder).delete(req.body);
+      await dataSource.getRepository(Grade).delete(req.params.id);
+      await dataSource.getRepository(Wilder).delete(req.params.id);
       res.send("deleted");
     } catch (error) {
       console.log(error);

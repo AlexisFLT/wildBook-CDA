@@ -1,17 +1,22 @@
 import axios from "axios";
+import PropTypes from 'prop-types';
 import { useState } from "react";
 
-const AddWilder = () => {
+const AddWilder = ({ refresh }) => {
     const [name, setName] = useState("");
     const [city, setCity] = useState("");
 
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        await axios.post("http://localhost:5000/api/wilder", { name, city }).then(() => {
+            setName("");
+            setCity("");
+            refresh();
+        });
+    };
+
     return(
-        <form 
-            onSubmit={(e) => {
-                e.preventDefault();
-                axios.post("http://localhost:5000/api/wilder", { name, city} );
-         }}
-        >
+        <form onSubmit={handleSubmit}>
             <label>Name</label>
             <input
                 type="text"
@@ -35,4 +40,9 @@ const AddWilder = () => {
     );
 };
 
-export default AddWilder
+AddWilder.propTypes = {
+    refresh: PropTypes.func.isRequired,
+
+}
+
+export default AddWilder;
