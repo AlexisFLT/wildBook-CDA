@@ -36,26 +36,52 @@
   .city{
     color: #757575;
     font-size: 0.6em;
+    margin-left: 2%;
   }
 
+  .skills{
+    padding: unset;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .skillGrade{
+    display: flex;
+    gap: 0.8em;
+    align-items: center;
+  }
+  
+
   .button {
+    height: 30px;
     cursor: pointer;
     text-decoration: none;
-    border: none;
-    background-color: #F76C6C;
+    border: #F76C6C 1px solid;
     color: #fff;
-    padding: 0.5em 1em;
     border-radius: 4px;
     display: inline-block;
     margin: 1%;
   }
 
-  .skills{
-    list-style: none;
+  .gradeTitle{
+    color: rgba(0, 0, 0, .3);
+    margin: 1%;
   }
 
   .grades{
-    border-radius: 50%;
     height: 20px;
     width: 20px; 
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  
+    /* Colors */
+    background-color: rgba(0, 0, 0, .3);
+    color: #FFF;
+  
+    /* Rounded border */
+    border-radius: 9999px;
   }
+
+
